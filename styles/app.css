@@ -1,0 +1,169 @@
+/* autoprefixer grid: autoplace */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.25;
+  font-size: calc(1rem + 0.2vh + 0.1vw);
+  font-weight: 400;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #008673;
+  text-decoration: none; 
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+h1,h2,h3,h4 {
+  display: inline-block;
+  border-bottom: 3px solid #008673;
+}
+
+img, picture {
+  max-width: 100%;
+  display: inline-block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+  
+p + p {
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-bottom: 0.5em;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/* header */
+header {
+  background-color: #f0f0f0;
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1em;
+  border-top: 1px solid black;
+  padding-top: 1em;
+}
+
+header ul > * { justify-self: center }
+
+@media (max-width: 40.0625em){
+  header ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+  }
+  header li {
+    grid-column: span 2;
+  }
+
+  header li:last-child:nth-child(3n - 1) {
+    grid-column-start: -3;
+    grid-column-end: -2;
+    grid-column: span 3;
+  }
+  
+  li:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-column: span 3;
+  }
+}
+
+header li {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header a {
+  color: currentColor;
+}
+
+header a:hover,
+header a:focus {
+  color: #008673;
+}
+
+header a[aria-current="page"] {
+  border-bottom: 3px solid #008673;
+}
+
+
+.content {
+  display: block;
+  max-width: 1024px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+  
+  
+
+/* footer */
+footer {
+  background-color: #033a62;
+  color: white;
+}
+
+footer p {
+  font-size: calc(.75rem + 0.2vh + 0.1vw);
+}
+
+@media (min-width: 40.0625em){
+  footer nav {
+    float: left;
+  }
+  footer p {
+    float: right;
+  }
+}
+footer li + li {
+  margin-left: 1em;
+}
+footer a {
+  color: currentColor;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
