@@ -10,6 +10,10 @@ const components = {
   Head,
 }
 
+export const config = {
+  unstable_runtimeJS: false
+}
+
 export default function Page({ source, frontMatter }) {
   return (
     <Layout>
@@ -44,4 +48,3 @@ export const getStaticProps = async () => {
     },
   }
 }
-
