@@ -1,4 +1,4 @@
-import '../styles/app.css'
+import '../public/styles/app.css'
 
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app'
