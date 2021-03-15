@@ -53,7 +53,7 @@ export const getStaticPaths = async () => {
   const paths = contentFilePath
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))
-    .filter((path) => !path.includes('homepage'))
+    .filter((path) => !path.includes('homepage') || !path.includes('admin'))
     // Map the path into the static paths object required by Next.js
     .map((slug) => ({ params: { slug } }))
 
