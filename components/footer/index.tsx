@@ -1,3 +1,5 @@
+import {clientName } from '../../utils/config'
+
 function Footer() {
   return (
     <footer>
@@ -51,7 +53,7 @@ function Footer() {
             </li>
           </ul>
         </nav>
-        <p>Copyright © 2021 Elmbridge Road Runners</p>
+        <p>Copyright © {new Date().getFullYear()} {clientName}</p>
       </div>
     </footer>
   )

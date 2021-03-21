@@ -5,6 +5,7 @@ import Head from 'next/head'
 import path from 'path'
 import Layout from '../layouts/content'
 import { contentFilePath, CONTENT_PATH } from '../utils/mdx'
+import { clientName } from '../utils/config'
 
 const components = {
   Head,
@@ -16,12 +17,17 @@ export const config = {
 
 export default function Page({ source, frontMatter }) {
   return (
+    <>
+    <Head>
+      <title>{frontMatter.title} - {clientName} </title>
+    </Head>
     <Layout>
       <h1>{frontMatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: source.renderedOutput}}
       />
     </Layout>
+    </>
   )
 }
 
