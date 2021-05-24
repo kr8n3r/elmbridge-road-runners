@@ -69,7 +69,7 @@ header {
 
 header ul {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 1em;
   border-top: 1px solid black;
@@ -77,28 +77,6 @@ header ul {
 }
 
 header ul > * { justify-self: center }
-
-@media (max-width: 40.0625em){
-  header ul {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-  }
-  header li {
-    grid-column: span 2;
-  }
-
-  header li:last-child:nth-child(3n - 1) {
-    grid-column-start: -3;
-    grid-column-end: -2;
-    grid-column: span 3;
-  }
-  
-  li:nth-last-child(2):nth-child(3n + 1) {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-column: span 3;
-  }
-}
 
 header li {
   text-transform: uppercase;

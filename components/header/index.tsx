@@ -8,9 +8,10 @@ function header() {
         </picture>
         <nav aria-label="Main navigation">
           <ul>
-            <li><a aria-current="page" href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/info">Info</a></li>
             <li><a href="/10k">Our 10K</a></li>
+            <li><a href="/couch-to-5k">Couch to 5k</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/directions">Directions</a></li>
           </ul>
